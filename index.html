@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a way home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2>Fantastic Adventure</h2>
+    </header>
+
+    <div id="container">
+
+        <div id="game">
+            <!--Main screen-->
+            <button onclick="start()" id="startButton">Start a game</button>
+            <!--Sounds-->
+            <audio src="/sounds/door.wav" id="doorSound"></audio>
+            <audio src="/sounds/pay.wav" id="coinSound"></audio>
+            <audio src="/sounds/fight.wav" id="fightSound"></audio>
+            <audio src="/sounds/victory.wav" id="victorySound"></audio>
+            <audio src="/sounds/success.mp3" id="successSound"></audio>
+
+            <div id="adventure">
+                <!--Home-->
+                <div id="home" class="text">
+                    <div> You're home. Let's start an adventure. <br />
+                        You just went outside. Where do you want to go?
+                    </div>
+                    <div id="options">
+                        <div id="left1" onclick="firstStepLeft()" class="option">I want to go left.</div>
+                        <div id="right1" onclick="firstStepRight()" class="option">I want to go right.</div>
+                    </div>
+                </div>
+                <!--Store-->
+                <div id='store' class='text'>
+                    <div>
+                        You see a store. What do you want to do now?
+                    </div>
+                    <img src="/pics/sign.png" alt="sign" class="image" id="signImage">
+                    <img src="/pics/storeBuilding.png" alt="Seller" class="image">
+                    <div id='options'>
+                        <div id='leftStore' onclick='storeLeft()' class='option'>I want to go left.</div>
+                        <div id='straightStore' onclick='storeStraight()' class='option'> I want to go straight.</div>
+                        <div id='rightStore' onclick='storeRight()' class='option'>I want to go right.</div>
+                        <div id='enterStore' onclick='storeInside()' class='option'>I want to go inside.</div>
+                        <div id='backStore' onclick='storeBack()' class='option'>I want to go back home.</div>
+                    </div>
+                </div>
+                <!--Wizard-->
+                <div id='advice' class='text'>
+                    <div>
+                        You see a wizard standing in the middle of the road. What do you want to
+                        do now?
+                    </div>
+                    <div class="wizard">
+                        <img src="/pics/advice.png" alt="Wizard" class="image" id="wizardImage">
+                        <div id="modalWizard" class="modal">
+                            <div id="modalWizardWords" class="modalContent">
+                                <span class="close">&times;</span>
+                                <p>You need more health! Find a store!</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id='options'>
+                        <div id='leftAdvice' onclick='adviceLeft()' class='option'>I want to go left.</div>
+                        <div id='rightAdvice' onclick='adviceRight()' class='option'>I want to go right.</div>
+                        <div id='enterAdvice' onclick='adviceTalk()' class='option'>I want to talk to him.</div>
+                        <div id='backAdvice' onclick='adviceBack()' class='option'>I want to go back home.</div>
+                    </div>
+                </div>
+                <!--Inside the store-->
+                <div id='storeInside' class='text'>
+                    <div id="seller">
+                        Hello there! What can I do for you? Do you want to buy 2 health
+                        points? The price is 4 golden coins. You can do it more than once.
+                    </div>
+                    <img src="/pics/store.png" alt="Seller" class="image">
+                    <div id='options'>
+                        <div id='buyHealth' onclick='buyHealth()' class='option'>Yes, please.</div>
+                        <div id='storeOut' onclick='storeOut()' class='option'> Thank you. I'll go out</div>
+                    </div>
+                </div>
+                <!--Red Dragon-->
+                <div id='redDragon' class='text'>
+                    <div id="redDragon-1">
+                        You see a Red Dragon standing in the middle of the road. If you want to
+                        pass you need to defeat him first. What do you want to do now?
+                    </div>
+                    <div id="redDragon-2">
+                        The Red Dragon has been defeated. You can continue your adventure. Don't forget to refill your
+                        health! Find a store!
+                    </div>
+                    <img id="redDragon-image" src="/pics/redDragon.png" alt="Red Dragon" class="image">
+                    <div id='options'>
+                        <div id='fightRedDragon' onclick='fightRedDragon()' class='option'>I want to fight.</div>
+                        <div id='backRedDragon' onclick='backRedDragon()' class='option'> I want to go back.</div>
+                        <div id='straightRedDragon' onclick='straightRedDragon()' class='option'> I want to go straight.
+                        </div>
+                    </div>
+                </div>
+                <!--Green Dragon-->
+                <div id='greenDragon' class='text'>
+                    <div id="greenDragon-1"> You see a Green Dragon standing in the middle of the road. If you
+                        want to pass you need to defeat him first. What do you want to do now?
+                    </div>
+                    <div id="greenDragon-2">
+                        The Green Dragon has been defeated. You can continue your adventure. Don't forget to refill your
+                        health! Find a store!
+                    </div>
+                    <img id="greenDragon-image" src="/pics/greenDragon.png" alt="Green Dragon" class="image">
+                    <div id='options'>
+                        <div id='fightGreenDragon' onclick='fightGreenDragon()' class='option'>I want to fight.</div>
+                        <div id='backGreenDragon' onclick='backGreenDragon()' class='option'> I want to go back.</div>
+                        <div id='straightGreenDragon' onclick='straightGreenDragon()' class='option'> I want to go
+                            straight.
+                        </div>
+                    </div>
+                </div>
+                <!--Gate-->
+                <div id='gate' class='text'>You see a wall in front of you. There is a small gate in the middle.
+                    What do you want to do?
+                    <img src="/pics/gate.png" alt="Gate" class="image">
+                    <div id='options'>
+                        <div id='openGate' onclick='openGate()' class='option'>I want to enter.</div>
+                        <div id='backGate' onclick='backGate()' class='option'> I want to go to the store.</div>
+                        <div id='backToRedDragon' onclick='backToRedDragon()' class='option'> I want to go back to the
+                            Red Dragon.</div>
+                        <div id='backToGreenDragon' onclick='backToGreenDragon()' class='option'> I want to go back to
+                            the Green Dragon.</div>
+                    </div>
+                </div>
+                <!--Black Dragon-->
+                <div id='blackDragon' class='text'>A big black dragon is looking at you. Will you fight him?
+                    <img src="/pics/blackDragon.png" alt="Black Dragon" class="image">
+                    <div id='options'>
+                        <div id='fight' onclick='fightDragonBoss()' class='option'>I want to fight. </div>
+                        <div id='backBlackDragon' onclick='backBlackDragon()' class='option'> I want to go back.</div>
+                        <div id='goToThePrincess' onclick='goToThePrincess()' class='option'>Enter the tower. </div>
+                    </div>
+                </div>
+                <!--Princess-->
+                <div id='princess' class='text'>
+                    <div id="finalText">You've arrived so far beating all your enemies.</div>
+                    <img src="/pics/princess.png" alt="Princess" class="image" id="princessImage">
+                    <img src="/pics/heart.png" alt="heart" class="image" id="heartPrincess">
+                    <img src="/pics/superhero.png" alt="Superhero" class="image" id="superheroPrincess">
+                    <div id='options'>
+                        <div id='saveThePrincess' onclick='saveThePrincess()' class='option'>You saved the Princess!
+                        </div>
+                    </div>
+                </div>
+
+                <!--You've lost against any of the dragons-->
+                <div id="end" class='end text'>
+                    <div class='endText' onclick='restart()'> You've lost all your health! Try to play again! </div>
+                </div>
+                <!--You're out of money-->
+                <div id="end2" class='end text'>
+                    <div class='endText' onclick='restart2()'> You've lost all your money! Try to play again! </div>
+                </div>
+            </div>
+        </div>
+        <!--Right side part with player's and his enemies' qualities-->
+        <div id="heroesAndMonsters">
+            <div id="character">
+                <h3>Your player</h3>
+                <img class="imageCharacter" src="/pics/superhero.png" alt="Superhero">
+                <div id="firstName"></div>
+                <div id="health"></div>
+                <div id="money"></div>
+            </div>
+            <div class="dragonHealth" id="redMonster">
+                <h3>Red Dragon</h3>
+                <div id="redDragonHealth"></div>
+            </div>
+            <div class="dragonHealth" id="greenMonster">
+                <h3>Green Dragon</h3>
+                <div id="greenDragonHealth"></div>
+            </div>
+            <div class="dragonHealth" id="blackMonster">
+                <h3>Black Dragon</h3>
+                <div id="blackDragonHealth"></div>
+            </div>
+            <div id="greenDragonHealth" class="dragonHealth"></div>
+            <div id="blackDragonHealth" class="dragonHealth"></div>
+        </div>
+
+    </div>
+    <footer>
+        <div>Author: Marek Zarzycki</div>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
+                href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </footer>
+</body>
+
+</html>

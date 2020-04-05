@@ -1,0 +1,252 @@
+* {
+    margin: 10px 0;
+}
+
+header {
+    background-color: cadetblue;
+    font-family: 'Indie Flower', cursive;
+    font-size: 2em;
+}
+
+h2 {
+    text-align: center;
+}
+
+#startButton {
+    width: 40%;
+    height: 150px;
+    font-size: 4em;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bolder;
+    margin-left: 30%;
+    margin-top: 10%;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 10px 10px rgb(56, 63, 63);
+    background-color: rgb(8, 201, 95);
+}
+
+.text {
+    font-weight: bold;
+    font-family: 'Indie Flower', cursive;
+    font-size: 2em;
+}
+
+#container {
+    display: flex;
+}
+
+#game {
+    margin: 10px;
+    background-color: peachpuff;
+    height: 500px;
+    width: 100%;
+}
+
+.imageCharacter {
+    width: 50px;
+}
+
+.image {
+    width: 100px;
+}
+
+.heroesAndMonsters {
+    display: flex;
+    align-items: center;
+}
+
+#character {
+    padding: 20px;
+    border: solid 2px black;
+    width: 180px;
+    height: 250px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family: 'Indie Flower', cursive;
+    border-radius: 30px;
+    display: none;
+}
+
+.dragonHealth {
+    padding: 10px;
+    border: solid 2px black;
+    width: 180px;
+    height: 100px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family: 'Indie Flower', cursive;
+    border-radius: 30px;
+    display: none;
+}
+
+#adventure {
+    text-align: center;
+    visibility: hidden;
+    padding: 30px;
+}
+
+#home {
+    display: block;
+}
+
+#store {
+    display: none;
+}
+.wizard {
+    display: flex;
+    align-items: center;
+    margin-left: 250px;
+}
+#advice {
+    display: none;
+}
+#wizardImage {
+    margin-left: 380px;
+}
+
+#storeInside {
+    display: none;
+}
+#seller {
+    align-items: flex-end;
+    border: dotted 2px black;
+    padding: 5px;
+    border-radius: 20px;
+}
+#straightRedDragon{
+    display: none;
+}
+#redDragon-2 {
+    display: none;
+}
+#redDragon {
+    display: none;
+}
+#straightGreenDragon{
+    display: none;
+}
+#greenDragon-2 {
+    display: none;
+}
+#greenDragon {
+    display: none;
+}
+
+#blackDragon {
+    display: none;
+}
+
+#gate {
+    display: none;
+}
+#backToRedDragon {
+    display: none;
+}
+#backToGreenDragon {
+    display: none;
+}
+#goToThePrincess {
+    display: none;
+}
+#princess {
+    display: none;
+}
+#superheroPrincess {
+    display: none;
+    width: 200px;
+}
+#heartPrincess {
+    display: none;
+    width: 200px;
+}
+
+
+#options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+#options>div {
+    border: 2px solid orangered;
+    background-color: palegreen;
+    width: 200px;
+    height: 100px;
+    font-size: 0.9em !important;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px 10px 20px 10px; 
+    box-shadow: 10px 10px rgb(56, 63, 63);
+}
+
+.end {
+    display: none;
+    justify-content: center;
+    flex-wrap: nowrap;
+    
+}
+
+.end>div {
+    border: 2px solid orangered;
+    background-color: palegreen;
+    width: 250px;
+    height: 130px;
+    border-radius: 20px;
+    margin-left: 500px;
+    margin-top: 150px;
+    padding: 20px;
+    box-shadow: 10px 10px rgb(56, 63, 63);
+}
+
+#options>div:hover {
+    cursor: pointer;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  .modalContent {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 60%; 
+    box-shadow: 5px 5px rgb(56, 63, 63);
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+footer {
+    width: 100%;
+    position: fixed;
+    background-color: cadetblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1em;
+    bottom: 0;
+    padding: 10px;
+}
