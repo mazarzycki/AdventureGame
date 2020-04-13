@@ -60,7 +60,7 @@ h2 {
     padding: 20px;
     border: solid 2px black;
     width: 180px;
-    height: 250px;
+    height: 330px;
     margin-right: 10px;
     font-weight: bold;
     font-size: 1.3em;
@@ -68,7 +68,32 @@ h2 {
     border-radius: 30px;
     display: none;
 }
-
+#weapon {
+    margin-top: -10px;
+    display: flex;
+}
+#fist {
+    width: 30px;
+    margin-left: 10px;
+}
+#sword {
+    width: 30px;
+    margin-left: 10px;
+    display: none;
+}
+#armor {
+    margin-top: -20px;
+    display: flex;
+}
+#none {
+    width: 30px;
+    margin-left: 10px;
+}
+#vest {
+    width: 30px;
+    margin-left: 10px;
+    display: none; 
+}
 .dragonHealth {
     padding: 10px;
     border: solid 2px black;
@@ -125,6 +150,10 @@ h2 {
 #redDragon {
     display: none;
 }
+#redDragon-image-defeated {
+    display: none;
+    margin-left: 570px;
+}
 #straightGreenDragon{
     display: none;
 }
@@ -136,6 +165,9 @@ h2 {
 }
 
 #blackDragon {
+    display: none;
+}
+#blackDragon-2 {
     display: none;
 }
 
@@ -200,6 +232,9 @@ h2 {
     padding: 20px;
     box-shadow: 10px 10px rgb(56, 63, 63);
 }
+.end>div:hover {
+    cursor: pointer;
+}
 
 #options>div:hover {
     cursor: pointer;
@@ -249,4 +284,8 @@ footer {
     font-size: 1em;
     bottom: 0;
     padding: 10px;
+    display: flex;
+}
+.footer-element {
+    margin: 0 20px;
 }

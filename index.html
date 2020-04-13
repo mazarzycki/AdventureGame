@@ -64,7 +64,7 @@
                         <div id="modalWizard" class="modal">
                             <div id="modalWizardWords" class="modalContent">
                                 <span class="close">&times;</span>
-                                <p>You need more health! Find a store!</p>
+                                <p>Make sure that your health is full!</p>
                             </div>
                         </div>
 
@@ -99,6 +99,19 @@
                         health! Find a store!
                     </div>
                     <img id="redDragon-image" src="/pics/redDragon.png" alt="Red Dragon" class="image">
+                    <img id="redDragon-image-defeated" src="/pics/redDragon_defeated.png" alt="Red Dragon Defeated" class="image">
+                    <div id="modalRedDragon" class="modal">
+                        <div id="modalFightRedDragon" class="modalContent">
+                            <span class="close">&times;</span>
+                            <p>Your opponent has lost 2 health points. </br>You have lost 1 health point. </p>
+                        </div>
+                    </div>
+                    <div id="modalRedDragonYouLost" class="modal">
+                        <div id="modalFightRedDragonYouLost" class="modalContent">
+                            <span class="close">&times;</span>
+                            <p>You've lost!</p>
+                        </div>
+                    </div>
                     <div id='options'>
                         <div id='fightRedDragon' onclick='fightRedDragon()' class='option'>I want to fight.</div>
                         <div id='backRedDragon' onclick='backRedDragon()' class='option'> I want to go back.</div>
@@ -116,6 +129,18 @@
                         health! Find a store!
                     </div>
                     <img id="greenDragon-image" src="/pics/greenDragon.png" alt="Green Dragon" class="image">
+                    <div id="modalGreenDragon" class="modal">
+                        <div id="modalFightGreenDragon" class="modalContent">
+                            <span class="close">&times;</span>
+                            <p>Your opponent has lost 2 health points. </br>You have lost 1 health point. </p>
+                        </div>
+                    </div>
+                    <div id="modalGreenDragonYouLost" class="modal">
+                        <div id="modalFightGreenDragonYouLost" class="modalContent">
+                            <span class="close">&times;</span>
+                            <p>You've lost!</p>
+                        </div>
+                    </div>
                     <div id='options'>
                         <div id='fightGreenDragon' onclick='fightGreenDragon()' class='option'>I want to fight.</div>
                         <div id='backGreenDragon' onclick='backGreenDragon()' class='option'> I want to go back.</div>
@@ -138,10 +163,13 @@
                     </div>
                 </div>
                 <!--Black Dragon-->
-                <div id='blackDragon' class='text'>A big black dragon is looking at you. Will you fight him?
+                <div id='blackDragon' class='text'>
+                    <div id="blackDragon-1">A big black dragon is looking at you. Will you fight him?</div>
+                    <div id="blackDragon-2">The Black Dragon has been defeated! Now you can set the Princess free!</div>
+
                     <img src="/pics/blackDragon.png" alt="Black Dragon" class="image">
                     <div id='options'>
-                        <div id='fight' onclick='fightDragonBoss()' class='option'>I want to fight. </div>
+                        <div id='fightBlackDragon' onclick='fightDragonBoss()' class='option'>I want to fight. </div>
                         <div id='backBlackDragon' onclick='backBlackDragon()' class='option'> I want to go back.</div>
                         <div id='goToThePrincess' onclick='goToThePrincess()' class='option'>Enter the tower. </div>
                     </div>
@@ -159,13 +187,10 @@
                 </div>
 
                 <!--You've lost against any of the dragons-->
-                <div id="end" class='end text'>
-                    <div class='endText' onclick='restart()'> You've lost all your health! Try to play again! </div>
+                <div id="end" class="end text">
+                    <div class="endText" onclick="restart()"> You've lost all your health! Try to play again! </div>
                 </div>
-                <!--You're out of money-->
-                <div id="end2" class='end text'>
-                    <div class='endText' onclick='restart2()'> You've lost all your money! Try to play again! </div>
-                </div>
+
             </div>
         </div>
         <!--Right side part with player's and his enemies' qualities-->
@@ -176,6 +201,16 @@
                 <div id="firstName"></div>
                 <div id="health"></div>
                 <div id="money"></div>
+                <div id="weapon">
+                    <div>Weapon:</div>
+                    <img src="/pics/punch.png" alt="fist" id="fist">
+                    <img src="/pics/sword.png" alt="sword" id="sword">
+                </div>
+                <div id="armor">
+                    <div>Armor:</div>
+                    <img src="/pics/none.png" alt="fist" id="none">
+                    <img src="/pics/vest.png" alt="sword" id="vest">
+                </div>
             </div>
             <div class="dragonHealth" id="redMonster">
                 <h3>Red Dragon</h3>
@@ -195,9 +230,12 @@
 
     </div>
     <footer>
-        <div>Author: Marek Zarzycki</div>
-        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
-                href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <div class="footer-element">Author: Marek Zarzycki</div>
+        <div class="footer-element">Icons made by <a href="https://www.flaticon.com/authors/freepik"
+                title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"
+                title="Flaticon">www.flaticon.com</a></div>
+        <div class="footer-element">Sounds taken from <a href="https://freesound.org/"
+                title="Freesound">Freesound.org</a></div>
     </footer>
 </body>
 
