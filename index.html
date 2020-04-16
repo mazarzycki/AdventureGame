@@ -24,7 +24,8 @@
             <audio src="/sounds/door.wav" id="doorSound"></audio>
             <audio src="/sounds/pay.wav" id="coinSound"></audio>
             <audio src="/sounds/fight.wav" id="fightSound"></audio>
-            <audio src="/sounds/victory.wav" id="victorySound"></audio>
+            <audio src="/sounds/short_fanfare.flac" id="victorySound"></audio>
+            <audio src="/sounds/long_fanfare.wav" id="finalVictory"></audio>
             <audio src="/sounds/success.mp3" id="successSound"></audio>
 
             <div id="adventure">
@@ -95,11 +96,14 @@
                         pass you need to defeat him first. What do you want to do now?
                     </div>
                     <div id="redDragon-2">
-                        The Red Dragon has been defeated. You can continue your adventure. Don't forget to refill your
-                        health! Find a store!
+                        The Red Dragon has been defeated. You can continue your adventure.
                     </div>
                     <img id="redDragon-image" src="/pics/redDragon.png" alt="Red Dragon" class="image">
-                    <img id="redDragon-image-defeated" src="/pics/redDragon_defeated.png" alt="Red Dragon Defeated" class="image">
+                    <div id="defeatedDragon">
+                        <img id="redDragon-image-defeated" src="/pics/redDragon_defeated.png" alt="Red Dragon Defeated"
+                            class="image">
+                        <img src="/pics/sword.png" alt="sword" id="swordDragon" onclick="takeSword()">
+                    </div>
                     <div id="modalRedDragon" class="modal">
                         <div id="modalFightRedDragon" class="modalContent">
                             <span class="close">&times;</span>
@@ -125,10 +129,14 @@
                         want to pass you need to defeat him first. What do you want to do now?
                     </div>
                     <div id="greenDragon-2">
-                        The Green Dragon has been defeated. You can continue your adventure. Don't forget to refill your
-                        health! Find a store!
+                        The Green Dragon has been defeated. You can continue your adventure.
                     </div>
                     <img id="greenDragon-image" src="/pics/greenDragon.png" alt="Green Dragon" class="image">
+                    <div id="defeatedDragon">
+                    <img id="greenDragon-image-defeated" src="/pics/greenDragon_defeated.png"
+                        alt="Green Dragon Defeated" class="image">
+                        <img src="/pics/vest.png" alt="armor" id="armorDragon" onclick="takeArmor()">
+                    </div>
                     <div id="modalGreenDragon" class="modal">
                         <div id="modalFightGreenDragon" class="modalContent">
                             <span class="close">&times;</span>
@@ -149,9 +157,10 @@
                         </div>
                     </div>
                 </div>
-                <!--Gate-->
-                <div id='gate' class='text'>You see a wall in front of you. There is a small gate in the middle.
-                    What do you want to do?
+                <!--Tower-->
+                <div id='gate' class='text'>
+                    <div>There is a tower in front of you. The gate seems to be open...</br>
+                        What do you want to do?</div>
                     <img src="/pics/gate.png" alt="Gate" class="image">
                     <div id='options'>
                         <div id='openGate' onclick='openGate()' class='option'>I want to enter.</div>
@@ -201,6 +210,7 @@
                 <div id="firstName"></div>
                 <div id="health"></div>
                 <div id="money"></div>
+                <div id="strength"></div>
                 <div id="weapon">
                     <div>Weapon:</div>
                     <img src="/pics/punch.png" alt="fist" id="fist">
@@ -209,7 +219,7 @@
                 <div id="armor">
                     <div>Armor:</div>
                     <img src="/pics/none.png" alt="fist" id="none">
-                    <img src="/pics/vest.png" alt="sword" id="vest">
+                    <img src="/pics/vest.png" alt="vest" id="vest">
                 </div>
             </div>
             <div class="dragonHealth" id="redMonster">

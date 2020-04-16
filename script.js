@@ -1,7 +1,8 @@
 var gameCharacter = {
     name: "Tomas",
     health: 4,
-    money: 12
+    money: 12,
+    strength: 3
 };
 
 var redDragon = {
@@ -23,6 +24,7 @@ window.onload = function characterProperties() {
     document.getElementById("firstName").innerHTML = "Name: " + gameCharacter.name;
     document.getElementById("health").innerHTML = "Health: " + gameCharacter.health;
     document.getElementById("money").innerHTML = "Money: " + gameCharacter.money;
+    document.getElementById("strength").innerHTML = "Strength: " + gameCharacter.strength;
     document.getElementById("redDragonHealth").innerHTML = "Health: " + redDragon.health;
     document.getElementById("greenDragonHealth").innerHTML = "Health: " + greenDragon.health;
     document.getElementById("blackDragonHealth").innerHTML = "Health: " + blackDragon.health;
@@ -135,7 +137,7 @@ function backRedDragon() {
 }
 
 function fightRedDragon() {
-    redDragon.health -= 2;
+    redDragon.health -= gameCharacter.strength;
     gameCharacter.health -= 1;
     document.getElementById("redDragonHealth").innerHTML = "Health: " + redDragon.health;
     document.getElementById("health").innerHTML = "Health: " + gameCharacter.health;
@@ -156,8 +158,8 @@ function fightRedDragon() {
 
     /*Red Dragon Fight result */
     if (gameCharacter.health <= 0 && redDragon.health >= 0) {
-        /* alert("You've lost!");
-         document.getElementById("modalRedDragonYouLost").style.display = "block";
+        alert("You've lost!");
+        /* document.getElementById("modalRedDragonYouLost").style.display = "block";
          var span = document.getElementsByClassName("close")[0];
          span.onclick = function () {
              document.getElementById("modalRedDragonYouLost").style.display = "none";
@@ -173,16 +175,27 @@ function fightRedDragon() {
         document.getElementById("end").style.display = "block"
     }
     if (gameCharacter.health > 0 && redDragon.health <= 0) {
-        alert("You've defeated the Red Dragon!");
+        var victorySound = document.getElementById("victorySound");
+        victorySound.play();
+        alert("You've defeated the Red Dragon!"); swordDragon
         document.getElementById("fightRedDragon").style.display = "none";
         document.getElementById("redMonster").style.display = "none";
         document.getElementById("redDragon-1").style.display = "none";
         document.getElementById("redDragon-image").style.display = "none";
-        document.getElementById("redDragon-image-defeated").style.display = "block";
+        document.getElementById("redDragon-image-defeated").style.display = "flex";
+        document.getElementById("swordDragon").style.display = "flex";
         document.getElementById("redDragon-2").style.display = "block";
         document.getElementById("straightRedDragon").style.display = "block";
         document.getElementById("backToRedDragon").style.display = "block";
     }
+}
+
+function takeSword() {
+    document.getElementById("swordDragon").style.display = "none";
+    document.getElementById("sword").style.display = "block";
+    document.getElementById("fist").style.display = "none";
+    gameCharacter.strength += 3;
+    document.getElementById("strength").innerHTML = "Strength: " + gameCharacter.strength;
 }
 
 function straightRedDragon() {
@@ -198,10 +211,13 @@ function backGreenDragon() {
 }
 
 function fightGreenDragon() {
-    greenDragon.health -= 4;
+    greenDragon.health -= gameCharacter.strength;
     gameCharacter.health -= 1;
     document.getElementById("greenDragonHealth").innerHTML = "Health: " + greenDragon.health;
     document.getElementById("health").innerHTML = "Health: " + gameCharacter.health;
+
+
+
 
     /* Modal indicating how many health points have been lost during a fight  */
     /*   if (gameCharacter.health > 0 && greenDragon.health > 0) {
@@ -235,14 +251,27 @@ function fightGreenDragon() {
         document.getElementById("end").style.display = "block"
     }
     if (gameCharacter.health > 0 && greenDragon.health <= 0) {
+        var victorySound = document.getElementById("victorySound");
+        victorySound.play();
         alert("You've defeated the Green Dragon!");
         document.getElementById("fightGreenDragon").style.display = "none";
         document.getElementById("greenMonster").style.display = "none";
         document.getElementById("greenDragon-1").style.display = "none";
+        document.getElementById("greenDragon-image").style.display = "none";
+        document.getElementById("greenDragon-image-defeated").style.display = "block";
+        document.getElementById("armorDragon").style.display = "flex";
         document.getElementById("greenDragon-2").style.display = "block";
         document.getElementById("straightGreenDragon").style.display = "block";
         document.getElementById("backToGreenDragon").style.display = "block";
     }
+}
+
+function takeArmor() {
+    document.getElementById("armorDragon").style.display = "none";
+    document.getElementById("vest").style.display = "block";
+    document.getElementById("none").style.display = "none";
+    gameCharacter.health += 7;
+    document.getElementById("health").innerHTML = "Health: " + gameCharacter.health;
 }
 
 function straightGreenDragon() {
@@ -251,7 +280,7 @@ function straightGreenDragon() {
     document.getElementById("gate").style.display = "block"
 }
 
-/*Gate screen*/
+/*Tower screen*/
 function openGate() {
     document.getElementById("gate").style.display = "none";
     document.getElementById("blackDragon").style.display = "block";
@@ -273,7 +302,7 @@ function backToGreenDragon() {
 /*Black Dragon screen*/
 function fightDragonBoss() {
     blackDragon.health -= 4;
-    gameCharacter.health -= 1;
+    gameCharacter.health -= 3;
 
     document.getElementById("blackDragonHealth").innerHTML = "Health: " + blackDragon.health;
     document.getElementById("health").innerHTML = "Health: " + gameCharacter.health;
@@ -284,6 +313,8 @@ function fightDragonBoss() {
         document.getElementById("end").style.display = "block"
     }
     if (gameCharacter.health > 0 && blackDragon.health <= 0) {
+        var finalVictory = document.getElementById("finalVictory");
+        finalVictory.play();
         alert("You've defeated the Black Dragon!");
         document.getElementById("blackDragon-1").style.display = "none";
         document.getElementById("blackMonster").style.display = "none";
@@ -296,7 +327,7 @@ function fightDragonBoss() {
 }
 
 function backBlackDragon() {
-    document.getElementById("blackDragon-1").style.display = "none";
+    document.getElementById("blackDragon").style.display = "none";
     document.getElementById("blackMonster").style.display = "none";
     document.getElementById("gate").style.display = "block";
 }
@@ -324,11 +355,13 @@ function restart() {
     document.getElementById("end").style.display = 'none';
     gameCharacter.health = 4;
     gameCharacter.money = 6;
+    gameCharacter.strength = 3;
     redDragon.health = 4;
     greenDragon.health = 4;
     blackDragon.health = 6;
     document.getElementById("health").innerHTML = "Health: " + gameCharacter.health;
     document.getElementById("money").innerHTML = "Money: " + gameCharacter.money;
+    document.getElementById("strength").innerHTML = "Strength: " + gameCharacter.strength;
     document.getElementById("redDragonHealth").innerHTML = "Health: " + redDragon.health;
     document.getElementById("greenDragonHealth").innerHTML = "Health: " + greenDragon.health;
     document.getElementById("blackDragonHealth").innerHTML = "Health: " + blackDragon.health;

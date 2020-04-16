@@ -15,7 +15,7 @@ h2 {
 #startButton {
     width: 40%;
     height: 150px;
-    font-size: 4em;
+    font-size: 3em;
     font-family: 'Indie Flower', cursive;
     font-weight: bolder;
     margin-left: 30%;
@@ -29,7 +29,7 @@ h2 {
 .text {
     font-weight: bold;
     font-family: 'Indie Flower', cursive;
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 #container {
@@ -60,10 +60,10 @@ h2 {
     padding: 20px;
     border: solid 2px black;
     width: 180px;
-    height: 330px;
+    height: 340px;
     margin-right: 10px;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-family: 'Indie Flower', cursive;
     border-radius: 30px;
     display: none;
@@ -101,7 +101,7 @@ h2 {
     height: 100px;
     margin-right: 10px;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-family: 'Indie Flower', cursive;
     border-radius: 30px;
     display: none;
@@ -150,9 +150,27 @@ h2 {
 #redDragon {
     display: none;
 }
+#defeatedDragon {
+    display: flex;
+}
 #redDragon-image-defeated {
     display: none;
     margin-left: 570px;
+}
+#swordDragon {
+    display: none;
+    width: 5%;
+    margin-left: 200px;
+   
+}
+#greenDragon-image-defeated {
+    display: none;
+    margin-left: 570px;
+}
+#armorDragon {
+    display: none;
+    width: 5%;
+    margin-left: 200px;
 }
 #straightGreenDragon{
     display: none;
