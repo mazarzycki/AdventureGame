@@ -112,7 +112,7 @@ function adviceRight() {
 }
 function adviceTalk() {
     document.getElementById("modalWizard").style.display = "block";
-    var span = document.getElementsByClassName("close")[0];
+    var span = document.getElementById("closeWizard");
     span.onclick = function () {
         document.getElementById("modalWizard").style.display = "none";
     }
@@ -177,7 +177,18 @@ function fightRedDragon() {
     if (gameCharacter.health > 0 && redDragon.health <= 0) {
         var victorySound = document.getElementById("victorySound");
         victorySound.play();
-        alert("You've defeated the Red Dragon!"); swordDragon
+
+        document.getElementById("modalRedDragonYouWon").style.display = "block";
+        var span = document.getElementById("closeRedWon");
+        span.onclick = function () {
+            document.getElementById("modalRedDragonYouWon").style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == document.getElementById("modalRedDragonYouWon")) {
+                document.getElementById("modalRedDragonYouWon").style.display = "none";
+            }
+        }
+        
         document.getElementById("fightRedDragon").style.display = "none";
         document.getElementById("redMonster").style.display = "none";
         document.getElementById("redDragon-1").style.display = "none";
@@ -253,7 +264,19 @@ function fightGreenDragon() {
     if (gameCharacter.health > 0 && greenDragon.health <= 0) {
         var victorySound = document.getElementById("victorySound");
         victorySound.play();
-        alert("You've defeated the Green Dragon!");
+       
+        document.getElementById("modalGreenDragonYouWon").style.display = "block";
+        var span = document.getElementById("closeGreen");
+        span.onclick = function () {
+            document.getElementById("modalGreenDragonYouWon").style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == document.getElementById("modalGreenDragonYouWon")) {
+                document.getElementById("modalGreenDragonYouWon").style.display = "none";
+            }
+        }
+
+
         document.getElementById("fightGreenDragon").style.display = "none";
         document.getElementById("greenMonster").style.display = "none";
         document.getElementById("greenDragon-1").style.display = "none";

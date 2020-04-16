@@ -64,7 +64,7 @@
                         <img src="/pics/advice.png" alt="Wizard" class="image" id="wizardImage">
                         <div id="modalWizard" class="modal">
                             <div id="modalWizardWords" class="modalContent">
-                                <span class="close">&times;</span>
+                                <span id="closeWizard">&times;</span>
                                 <p>Make sure that your health is full!</p>
                             </div>
                         </div>
@@ -112,8 +112,14 @@
                     </div>
                     <div id="modalRedDragonYouLost" class="modal">
                         <div id="modalFightRedDragonYouLost" class="modalContent">
-                            <span class="close">&times;</span>
+                            <span id="closeRedLost">&times;</span>
                             <p>You've lost!</p>
+                        </div>
+                    </div>
+                    <div id="modalRedDragonYouWon" class="modal">
+                        <div id="modalFightRedDragonYouWon" class="modalContent">
+                            <span id="closeRedWon">&times;</span>
+                            <p>You've defeated the Red Dragon!</p>
                         </div>
                     </div>
                     <div id='options'>
@@ -145,8 +151,14 @@
                     </div>
                     <div id="modalGreenDragonYouLost" class="modal">
                         <div id="modalFightGreenDragonYouLost" class="modalContent">
-                            <span class="close">&times;</span>
+                            <span id="closeGreenLost">&times;</span>
                             <p>You've lost!</p>
+                        </div>
+                    </div>
+                    <div id="modalGreenDragonYouWon" class="modal">
+                        <div id="modalFightGreenDragonYouWon" class="modalContent">
+                            <span id="closeGreenWon">&times;</span>
+                            <p>You've defeated the Green Dragon!</p>
                         </div>
                     </div>
                     <div id='options'>
@@ -177,12 +189,27 @@
                     <div id="blackDragon-2">The Black Dragon has been defeated! Now you can set the Princess free!</div>
 
                     <img src="/pics/blackDragon.png" alt="Black Dragon" class="image">
+                    
+                    <div id="modalBlackDragonYouLost" class="modal">
+                        <div id="modalFightBlackDragonYouLost" class="modalContent">
+                            <span id="closeBlackLost">&times;</span>
+                            <p>You've lost!</p>
+                        </div>
+                    </div>
+                    <div id="modalBlackDragonYouWon" class="modal">
+                        <div id="modalFightBlackDragonYouWon" class="modalContent">
+                            <span id="closeBlackWon">&times;</span>
+                            <p>You've defeated the Black Dragon!</p>
+                        </div>
+                    </div>
+                    
                     <div id='options'>
                         <div id='fightBlackDragon' onclick='fightDragonBoss()' class='option'>I want to fight. </div>
                         <div id='backBlackDragon' onclick='backBlackDragon()' class='option'> I want to go back.</div>
                         <div id='goToThePrincess' onclick='goToThePrincess()' class='option'>Enter the tower. </div>
                     </div>
                 </div>
+
                 <!--Princess-->
                 <div id='princess' class='text'>
                     <div id="finalText">You've arrived so far beating all your enemies.</div>

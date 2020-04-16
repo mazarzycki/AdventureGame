@@ -279,19 +279,30 @@ h2 {
     width: 60%; 
     box-shadow: 5px 5px rgb(56, 63, 63);
   }
-  .close {
+  #closeRedWon, #closeGreenWon, #closeRedLost, #closeGreenLost, #closeWizard {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
   }
   
-  .close:hover,
-  .close:focus {
+  #closeRedWon:hover,
+  #closeRedWon:focus,
+  #closeGreenWon:hover,
+  #closeGreenWon:focus,
+  #closeWizardWon:hover,
+  #closeWizardWon:focus,
+  #closeRedLost:hover,
+  #closeRedLost:focus,
+  #closeGreenLost:hover,
+  #closeGreenLost:focus,
+  #closeWizardLost:hover,
+  #closeWizardLost:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
   }
+
 
 footer {
     width: 100%;
