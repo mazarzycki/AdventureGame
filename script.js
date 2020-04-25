@@ -125,7 +125,6 @@ function adviceTalk() {
 
 function adviceBack() {
     document.getElementById("advice").style.display = "none";
-    document.getElementById("wizardWords").style.display = "none";
     document.getElementById("home").style.display = "block";
 }
 
