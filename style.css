@@ -214,13 +214,13 @@ h2 {
 }
 
 
-#options {
+.options {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
 }
 
-#options>div {
+.options>div {
     border: 2px solid orangered;
     background-color: palegreen;
     width: 200px;
@@ -290,14 +290,13 @@ h2 {
   #closeRedWon:focus,
   #closeGreenWon:hover,
   #closeGreenWon:focus,
-  #closeWizardWon:hover,
-  #closeWizardWon:focus,
+  #closeWizard:hover,
+  #closeWizard:focus,
   #closeRedLost:hover,
   #closeRedLost:focus,
   #closeGreenLost:hover,
-  #closeGreenLost:focus,
-  #closeWizardLost:hover,
-  #closeWizardLost:focus {
+  #closeGreenLost:focus
+  {
     color: black;
     text-decoration: none;
     cursor: pointer;

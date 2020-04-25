@@ -266,7 +266,7 @@ function fightGreenDragon() {
         victorySound.play();
        
         document.getElementById("modalGreenDragonYouWon").style.display = "block";
-        var span = document.getElementById("closeGreen");
+        var span = document.getElementById("closeGreenWon");
         span.onclick = function () {
             document.getElementById("modalGreenDragonYouWon").style.display = "none";
         }
