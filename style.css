@@ -212,7 +212,12 @@ h2 {
     display: none;
     width: 200px;
 }
-
+#restart {
+    display: none;
+    width: 100px;
+    height: 25px;
+    padding-top: 4px;
+}
 
 .options {
     display: flex;
@@ -279,7 +284,7 @@ h2 {
     width: 60%; 
     box-shadow: 5px 5px rgb(56, 63, 63);
   }
-  #closeRedWon, #closeGreenWon, #closeRedLost, #closeGreenLost, #closeWizard {
+  #closeRedWon, #closeGreenWon, #closeRedLost, #closeGreenLost, #closeWizard, #closeStoreFull {
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -295,12 +300,15 @@ h2 {
   #closeRedLost:hover,
   #closeRedLost:focus,
   #closeGreenLost:hover,
-  #closeGreenLost:focus
+  #closeGreenLost:focus,
+  #closeStoreFull:hover,
+  #closeStoreFull:focus
   {
     color: black;
     text-decoration: none;
     cursor: pointer;
   }
+
 
 
 footer {
