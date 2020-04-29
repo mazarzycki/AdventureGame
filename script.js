@@ -83,9 +83,31 @@ function buyHealth() {
     var coinSound = document.getElementById("coinSound");
 
     if (gameCharacter.money < 4 && gameCharacter.health < 10) {
-        alert("You don't have enough money!")
+        
+        document.getElementById("modalStoreNoMoney").style.display = "block";
+        var span = document.getElementById("closeStoreNoMoney");
+        span.onclick = function () {
+            document.getElementById("modalStoreNoMoney").style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == document.getElementById("modalStoreNoMoney")) {
+                document.getElementById("modalStoreNoMoney").style.display = "none";
+            }
+        }
+
     } else if (gameCharacter.money < 4 && gameCharacter.health == 10) {
-        alert("You don't have enough money but your health is full!")
+        
+        document.getElementById("modalStoreNoMoneyHealthFull").style.display = "block";
+        var span = document.getElementById("closeStoreNoMoneyHealthFull");
+        span.onclick = function () {
+            document.getElementById("modalStoreNoMoneyHealthFull").style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == document.getElementById("modalStoreNoMoneyHealthFull")) {
+                document.getElementById("modalStoreNoMoneyHealthFull").style.display = "none";
+            }
+        }
+
     }
 
     else if (gameCharacter.health < 10 && gameCharacter.money >= 4) {
@@ -296,7 +318,7 @@ function backToGreenDragon() {
 /*Black Dragon screen*/
 function fightDragonBoss() {
     blackDragon.health -= gameCharacter.strength;
-    gameCharacter.health -= 3;
+    gameCharacter.health -= 2;
 
     document.getElementById("blackDragonHealth").innerHTML = "Health: " + blackDragon.health;
     document.getElementById("health").innerHTML = "Health: " + gameCharacter.health;

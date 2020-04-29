@@ -284,7 +284,14 @@ h2 {
     width: 60%; 
     box-shadow: 5px 5px rgb(56, 63, 63);
   }
-  #closeRedWon, #closeGreenWon, #closeRedLost, #closeGreenLost, #closeWizard, #closeStoreFull {
+  #closeRedWon, 
+  #closeGreenWon, 
+  #closeRedLost, 
+  #closeGreenLost, 
+  #closeWizard, 
+  #closeStoreFull, 
+  #closeStoreNoMoney, 
+  #closeStoreNoMoneyHealthFull {
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -302,7 +309,11 @@ h2 {
   #closeGreenLost:hover,
   #closeGreenLost:focus,
   #closeStoreFull:hover,
-  #closeStoreFull:focus
+  #closeStoreFull:focus,
+  #closeStoreNoMoney:hover,
+  #closeStoreNoMoney:focus,
+  #closeStoreNoMoneyHealthFull:hover,
+  #closeStoreNoMoneyHealthFull:focus
   {
     color: black;
     text-decoration: none;
