@@ -153,6 +153,9 @@ h2 {
 #defeatedDragon {
     display: flex;
 }
+#redDragon-image {
+    margin-left: 100px;
+}
 #redDragon-image-defeated {
     display: none;
     margin-left: 570px;
@@ -285,7 +288,8 @@ h2 {
     box-shadow: 5px 5px rgb(56, 63, 63);
   }
   #closeRedWon, 
-  #closeGreenWon, 
+  #closeGreenWon,
+  #closeBlackWon, 
   #closeRedLost, 
   #closeGreenLost, 
   #closeWizard, 
@@ -308,6 +312,8 @@ h2 {
   #closeRedLost:focus,
   #closeGreenLost:hover,
   #closeGreenLost:focus,
+  #closeBlackWon:hover,
+  #closeBlackWon:focus,
   #closeStoreFull:hover,
   #closeStoreFull:focus,
   #closeStoreNoMoney:hover,
