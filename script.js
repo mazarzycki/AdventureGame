@@ -421,7 +421,7 @@ function restart() {
     document.getElementById("blackMonster").style.display = "none";
     
     gameCharacter.health = 4;
-    gameCharacter.money = 6;
+    gameCharacter.money = 12;
     gameCharacter.strength = 3;
     redDragon.health = 6;
     greenDragon.health = 6;
