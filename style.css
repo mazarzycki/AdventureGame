@@ -42,7 +42,12 @@ h2 {
     height: 500px;
     width: 100%;
 }
-
+/* @keyframes newItems {
+    0% {color: black; font-size: 0.9em;}
+    50% {color: red; font-size: 1.1em;}
+    100% {color: black; font-size: 0.9em;}
+}
+ */
 .imageCharacter {
     width: 50px;
 }
@@ -51,9 +56,10 @@ h2 {
     width: 100px;
 }
 
-.heroesAndMonsters {
+#heroesAndMonsters {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 #character {
@@ -63,7 +69,7 @@ h2 {
     height: 340px;
     margin-right: 10px;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-family: 'Indie Flower', cursive;
     border-radius: 30px;
     display: none;
@@ -101,7 +107,7 @@ h2 {
     height: 100px;
     margin-right: 10px;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-family: 'Indie Flower', cursive;
     border-radius: 30px;
     display: none;
@@ -191,7 +197,10 @@ h2 {
 #blackDragon-2 {
     display: none;
 }
-
+#blackDragon-image-defeated {
+    display: none;
+    margin-left: 670px;
+}
 #gate {
     display: none;
 }

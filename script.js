@@ -115,6 +115,8 @@ function buyHealth() {
         gameCharacter.health += 2;
         gameCharacter.money -= 4;
         document.getElementById("health").innerHTML = "Health: " + gameCharacter.health;
+        /*document.getElementById("health").style.animation = "newItems 1s";
+        document.getElementById("money").style.animation = "newItems 1s";*/
         document.getElementById("money").innerHTML = "Money: " + gameCharacter.money;
     } else if (gameCharacter.health = 10) {
         document.getElementById("health").innerHTML = "Health: " + gameCharacter.health;
@@ -173,6 +175,8 @@ function fightRedDragon() {
     gameCharacter.health -= 2;
     document.getElementById("redDragonHealth").innerHTML = "Health: " + redDragon.health;
     document.getElementById("health").innerHTML = "Health: " + gameCharacter.health;
+   /* document.getElementById("health").style.animation = "newItems 1s";
+    document.getElementById("redDragonHealth").style.animation = "newItems 1s"; */
 
 
     /*Red Dragon Fight result */
@@ -216,6 +220,8 @@ function takeSword() {
     document.getElementById("fist").style.display = "none";
     gameCharacter.strength += 3;
     document.getElementById("strength").innerHTML = "Strength: " + gameCharacter.strength;
+    /*document.getElementById("strength").style.animation = "newItems 1s";*/
+    
 }
 
 function straightRedDragon() {
@@ -235,6 +241,8 @@ function fightGreenDragon() {
     gameCharacter.health -= 1;
     document.getElementById("greenDragonHealth").innerHTML = "Health: " + greenDragon.health;
     document.getElementById("health").innerHTML = "Health: " + gameCharacter.health;
+    /*document.getElementById("health").style.animation = "newItems 1s";
+    document.getElementById("greenDragonHealth").style.animation = "newItems 1s";*/
 
     /* Green Dragon Fight result */
     if (gameCharacter.health <= 0 && greenDragon.health > 0) {
@@ -288,6 +296,7 @@ function takeArmor() {
     document.getElementById("none").style.display = "none";
     gameCharacter.health += 7;
     document.getElementById("health").innerHTML = "Health: " + gameCharacter.health;
+   /* document.getElementById("health").style.animation = "newItems 1s"; */
 }
 
 function straightGreenDragon() {
@@ -318,11 +327,15 @@ function backToGreenDragon() {
 /*Black Dragon screen*/
 function fightDragonBoss() {
     blackDragon.health -= gameCharacter.strength;
-    gameCharacter.health -= 3;
+    gameCharacter.health -= 4;
 
     document.getElementById("blackDragonHealth").innerHTML = "Health: " + blackDragon.health;
     document.getElementById("health").innerHTML = "Health: " + gameCharacter.health;
-    if (gameCharacter.health <= 0 && blackDragon.health > 0) {
+    /* document.getElementById("health").style.animation = "newItems 1s";
+    document.getElementById("black DragonHealth").style.animation = "newItems 1s"; */
+
+    /*Black Dragon fight result */
+    if (gameCharacter.health <= 0 && blackDragon.health >= 0) {
        
         document.getElementById("blackDragon").style.display = "none";
         document.getElementById("blackMonster").style.display = "none";
@@ -349,6 +362,8 @@ function fightDragonBoss() {
         document.getElementById("blackDragon-1").style.display = "none";
         document.getElementById("blackMonster").style.display = "none";
         document.getElementById("character").style.display = "none";
+        document.getElementById("blackDragon-image").style.display = "none";
+        document.getElementById("blackDragon-image-defeated").style.display = "flex";
         document.getElementById("fightBlackDragon").style.display = "none";
         document.getElementById("backBlackDragon").style.display = "none";
         document.getElementById("blackDragon-2").style.display = "block";
@@ -390,9 +405,9 @@ function restart() {
     document.getElementById("none").style.display = "block";
     document.getElementById("end").style.display = 'none';
     document.getElementById("greenDragon-2").style.display = "none";
-    document.getElementById("greenDragon-1").style.display = "block";
+    document.getElementById("greenDragon-1").style.display = "flex";
     document.getElementById("redDragon-2").style.display = "none";
-    document.getElementById("redDragon-1").style.display = "block";
+    document.getElementById("redDragon-1").style.display = "flex";
     document.getElementById("redDragon-image").style.display = "block";
     document.getElementById("redDragon-image-defeated").style.display = "none";
     document.getElementById("greenDragon-image").style.display = "block";
