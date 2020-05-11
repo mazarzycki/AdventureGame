@@ -351,3 +351,32 @@ footer {
 .footer-element {
     margin: 0 20px;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    * {margin: 5% 0;}
+    header {font-size: 2em;}
+    #startButton {font-size: 2em;}
+    .text {font-size: 1.2em;}
+    #game {height: 70%;}
+    .options>div {width: 20%; height: 15%; font-size: 0.7em !important; }
+    #character {width: 70px; height: 300px; padding: 15px ; }
+    .dragonHealth {width: 45%; height: 70px;}
+    #fist {width: 15px;}
+    #sword {width: 15px;}
+    #armor {width: 15px;}
+    #none {width: 15px;}
+    #vest {width: 15px;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
