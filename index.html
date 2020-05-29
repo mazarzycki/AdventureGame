@@ -13,7 +13,8 @@
     </script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
     <title>Fantastic Adventure</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
@@ -129,13 +130,17 @@
                     <div id="redDragon-2">
                         The Red Dragon has been defeated. You can continue your adventure.
                     </div>
-                    <img id="redDragon-image" src="pics/redDragon.png" alt="Red Dragon" class="image">
-                    <div id="defeatedDragon">
-                        <img id="redDragon-image-defeated" src="pics/redDragon_defeated.png" alt="Red Dragon Defeated"
-                        
-                            class="image">
-                        <img src="pics/sword.png" alt="sword" id="swordDragon" onclick="takeSword()">
+                    <div id="redDragonPictures">
+                        <img id="redDragon-image" src="pics/redDragon.png" alt="Red Dragon" class="image">
+                        <div id="defeatedDragon">
+                            <img id="redDragon-image-defeated" src="pics/redDragon_defeated.png" alt="Red Dragon Defeated"
+                            
+                                class="image">
+                            <img src="pics/sword.png" alt="sword" id="swordDragon" onclick="takeSword()">
+                        </div>
+
                     </div>
+                   
 
 
                     <div id="modalRedDragonYouWon" class="modal">
@@ -259,7 +264,7 @@
         <!--Right side part with player's and his enemies' qualities-->
         <div id="heroesAndMonsters">
             <div id="character">
-                <h3>Your player</h3>
+                <h3 id="yourPlayer">Your player</h3>
                 <img class="imageCharacter" src="pics/superhero.png" alt="Superhero">
                 <div id="firstName"></div>
                 <div id="health"></div>

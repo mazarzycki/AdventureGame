@@ -17,7 +17,7 @@ var greenDragon = {
 
 var blackDragon = {
     name: "Black Dragon",
-    health: 8
+    health: 7
 }
 
 window.onload = function characterProperties() {
@@ -238,15 +238,18 @@ function backGreenDragon() {
 
 function fightGreenDragon() {
     greenDragon.health -= gameCharacter.strength;
-    gameCharacter.health -= 1;
+    gameCharacter.health -= 2;
     document.getElementById("greenDragonHealth").innerHTML = "Health: " + greenDragon.health;
     document.getElementById("health").innerHTML = "Health: " + gameCharacter.health;
     /*document.getElementById("health").style.animation = "newItems 1s";
     document.getElementById("greenDragonHealth").style.animation = "newItems 1s";*/
 
     /* Green Dragon Fight result */
-    if (gameCharacter.health <= 0 && greenDragon.health > 0) {
-        alert("You've lost!");
+    if (gameCharacter.health <= 0 && greenDragon.health >= 0) {
+        document.getElementById("greenDragon").style.display = "none";
+        document.getElementById("greenMonster").style.display = "none";
+        document.getElementById("character").style.display = "none";
+        document.getElementById("end").style.display = "block"
 
         /*document.getElementById("modalGreenDragonYouLost").style.display = "block";
         var span = document.getElementsByClassName("close")[0];
@@ -294,7 +297,7 @@ function takeArmor() {
     document.getElementById("armorDragon").style.display = "none";
     document.getElementById("vest").style.display = "block";
     document.getElementById("none").style.display = "none";
-    gameCharacter.health += 7;
+    gameCharacter.health += 9;
     document.getElementById("health").innerHTML = "Health: " + gameCharacter.health;
    /* document.getElementById("health").style.animation = "newItems 1s"; */
 }
@@ -327,7 +330,7 @@ function backToGreenDragon() {
 /*Black Dragon screen*/
 function fightDragonBoss() {
     blackDragon.health -= gameCharacter.strength;
-    gameCharacter.health -= 4;
+    gameCharacter.health -= 6;
 
     document.getElementById("blackDragonHealth").innerHTML = "Health: " + blackDragon.health;
     document.getElementById("health").innerHTML = "Health: " + gameCharacter.health;
@@ -335,7 +338,7 @@ function fightDragonBoss() {
     document.getElementById("black DragonHealth").style.animation = "newItems 1s"; */
 
     /*Black Dragon fight result */
-    if (gameCharacter.health <= 0 && blackDragon.health >= 0) {
+    if (gameCharacter.health <= 0) {
        
         document.getElementById("blackDragon").style.display = "none";
         document.getElementById("blackMonster").style.display = "none";

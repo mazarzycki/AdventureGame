@@ -1,6 +1,4 @@
-* {
-    margin: 10px 0;
-}
+
 
 header {
     background-color: cadetblue;
@@ -27,6 +25,8 @@ h2 {
 }
 
 .text {
+    display: flex;
+    flex-direction: column;
     font-weight: bold;
     font-family: 'Indie Flower', cursive;
     font-size: 1.8em;
@@ -70,12 +70,13 @@ h2 {
     margin-right: 10px;
     font-weight: bold;
     font-size: 0.9em;
+    line-height: 2em;
     font-family: 'Indie Flower', cursive;
     border-radius: 30px;
     display: none;
 }
 #weapon {
-    margin-top: -10px;
+    
     display: flex;
 }
 #fist {
@@ -88,7 +89,7 @@ h2 {
     display: none;
 }
 #armor {
-    margin-top: -20px;
+    
     display: flex;
 }
 #none {
@@ -127,16 +128,14 @@ h2 {
     display: none;
 }
 .wizard {
-    display: flex;
+    position: relative;
     align-items: center;
-    margin-left: 250px;
+    
 }
 #advice {
     display: none;
 }
-#wizardImage {
-    margin-left: 380px;
-}
+
 
 #storeInside {
     display: none;
@@ -158,18 +157,20 @@ h2 {
 }
 #defeatedDragon {
     display: flex;
+   position: relative;
 }
-#redDragon-image {
-    margin-left: 100px;
+#redDragonPictures {
+    position: relative;
 }
+
 #redDragon-image-defeated {
     display: none;
-    margin-left: 570px;
+   margin-left: 450px;
 }
 #swordDragon {
     display: none;
     width: 5%;
-    margin-left: 200px;
+    margin-left: 50px;
    
 }
 #greenDragon-image-defeated {
@@ -179,7 +180,7 @@ h2 {
 #armorDragon {
     display: none;
     width: 5%;
-    margin-left: 200px;
+    margin-left: 50px;
 }
 #straightGreenDragon{
     display: none;
@@ -352,31 +353,19 @@ footer {
     margin: 0 20px;
 }
 
-/* Extra small devices (phones, 600px and down) */
+
 @media only screen and (max-width: 600px) {
-    * {margin: 5% 0;}
-    header {font-size: 2em;}
-    #startButton {font-size: 2em;}
-    .text {font-size: 1.2em;}
-    #game {height: 70%;}
-    .options>div {width: 20%; height: 15%; font-size: 0.7em !important; }
-    #character {width: 70px; height: 300px; padding: 15px ; }
-    .dragonHealth {width: 45%; height: 70px;}
-    #fist {width: 15px;}
-    #sword {width: 15px;}
-    #armor {width: 15px;}
-    #none {width: 15px;}
-    #vest {width: 15px;}
+    body {margin: 0 20px;}
+    #startButton{font-size: 1.5em; height: 100px;}
+    
 }
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {...}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {...}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+    body {margin: 0 20px;}
+   
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    body {margin: 0 20px;}
+   
+}
+@media only screen and (min-width: 992px) {
+    body {margin: 20px 200px;}
+}
