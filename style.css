@@ -370,6 +370,7 @@ footer {
     #swordDragon{margin: auto;max-width: 40px; height:auto;}
     #greenDragon-image-defeated{margin: auto;}
     #armorDragon{margin: auto;}
+    #blackDragon-image-defeated{margin: auto}
     .options{display: flex; flex: 1;}
     .footer-element{font-size: .8em; margin: 0;}
    
