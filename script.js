@@ -391,7 +391,7 @@ function saveThePrincess() {
     successSound.play();
     document.getElementById("superheroPrincess").style.display = "inline";
     document.getElementById("heartPrincess").style.display = "inline";
-    document.getElementById("princessImage").style.width = "200px";
+    document.getElementById("princessImage").style.width = "20%";
     document.getElementById("saveThePrincess").style.display = "none";
     document.getElementById("princess").style.marginTop = "120px";
     document.getElementById("finalText").style.display = "none";

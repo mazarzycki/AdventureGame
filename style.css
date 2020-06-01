@@ -222,11 +222,11 @@ h2 {
 }
 #superheroPrincess {
     display: none;
-    width: 200px;
+    width: 20%;
 }
 #heartPrincess {
     display: none;
-    width: 200px;
+    width: 20%;
 }
 #restart {
     display: none;
@@ -357,21 +357,22 @@ footer {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
     body {margin: 0 20px;}
     #startButton{font-size: 1.5em; height: 100px;}
     #container{display: flex; flex-direction: column-reverse;}
-    #character{display: none !important;}
-    #characterMobile {display: block;} /* NAO FUNCIONA */
-    .text{font-size: 1.2em;}
+    #yourPlayer, .imageCharacter, #weapon, #armor{display: none;}
+    #character{height: 100px; padding: 15px;}
+    #heroesAndMonsters{flex-direction: row;}
+    .text{font-size: 1em;}
     .end>div{margin: auto;}
     #redDragon-image-defeated{margin: auto;}
-    #swordDragon{margin: auto;height: 2em;}
+    #swordDragon{margin: auto;max-width: 40px; height:auto;}
     #greenDragon-image-defeated{margin: auto;}
-    #armorDragon{margin: auto; height: ;}
-}
-@media only screen and (min-width: 601px) and (max-width: 767px) {
-    body {margin: 0 20px;}
+    #armorDragon{margin: auto;}
+    .options{display: flex; flex: 1;}
+    .footer-element{font-size: .8em; margin: 0;}
+   
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     body {margin: 0 20px;}

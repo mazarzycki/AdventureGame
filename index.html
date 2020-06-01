@@ -62,7 +62,7 @@
                         <div id='straightStore' onclick='storeStraight()' class='option'> I want to go straight.</div>
                         <div id='rightStore' onclick='storeRight()' class='option'>I want to go right.</div>
                         <div id='enterStore' onclick='storeInside()' class='option'>I want to go inside.</div>
-                        <div id='backStore' onclick='storeBack()' class='option'>I want to go back home.</div>
+                        <div id='backStore' onclick='storeBack()' class='option'>I want to go home.</div>
                     </div>
                 </div>
                 <!--Wizard-->
@@ -85,7 +85,7 @@
                         <div id='leftAdvice' onclick='adviceLeft()' class='option'>I want to go left.</div>
                         <div id='rightAdvice' onclick='adviceRight()' class='option'>I want to go right.</div>
                         <div id='enterAdvice' onclick='adviceTalk()' class='option'>I want to talk to him.</div>
-                        <div id='backAdvice' onclick='adviceBack()' class='option'>I want to go back home.</div>
+                        <div id='backAdvice' onclick='adviceBack()' class='option'>I want to go home.</div>
                     </div>
                 </div>
                 <!--Inside the store-->
@@ -170,12 +170,7 @@
                             alt="Green Dragon Defeated" class="image">
                         <img src="pics/vest.png" alt="armor" id="armorDragon" onclick="takeArmor()">
                     </div>
-                    <div id="modalGreenDragon" class="modal">
-                        <div id="modalFightGreenDragon" class="modalContent">
-                            <span class="close">&times;</span>
-                            <p>Your opponent has lost 2 health points. </br>You have lost 1 health point. </p>
-                        </div>
-                    </div>
+                  
                     <div id="modalGreenDragonYouLost" class="modal">
                         <div id="modalFightGreenDragonYouLost" class="modalContent">
                             <span id="closeGreenLost">&times;</span>
@@ -244,9 +239,13 @@
                 <!--Princess-->
                 <div id='princess' class='text'>
                     <div id="finalText">You've arrived so far beating all your enemies.</div>
-                    <img src="pics/princess.png" alt="Princess" class="image" id="princessImage">
-                    <img src="pics/heart.png" alt="heart" class="image" id="heartPrincess">
-                    <img src="pics/superhero.png" alt="Superhero" class="image" id="superheroPrincess">
+                    <div class="finalScreen">
+                        <img src="pics/princess.png" alt="Princess" class="image finalImage" id="princessImage">
+                        <img src="pics/heart.png" alt="heart" class="image finalImage" id="heartPrincess">
+                        <img src="pics/superhero.png" alt="Superhero" class="image finalImage" id="superheroPrincess">
+
+                    </div>
+                    
                     <div class="options">
                         <div id='saveThePrincess' onclick='saveThePrincess()' class='option'>You saved the Princess!
                         </div>
@@ -281,16 +280,7 @@
                     <img src="pics/vest.png" alt="vest" id="vest">
                 </div>
             </div>
-            <!--Character for mobile-->
-
-            <div id="characterMobile">
-                               
-                <div id="firstName"></div>
-                <div id="health"></div>
-                <div id="money"></div>
-                <div id="strength"></div>
-               
-            </div>
+           
 
 
             <div class="dragonHealth" id="redMonster">
