@@ -1,4 +1,4 @@
-              ![Superhero](https://github.com/mazarzycki/AdventureGame/blob/master/pics/superhero.png)
+              ![Superhero](./pics/superhero.png)
                       
  
  # Fantastic Adventure
