@@ -1,8 +1,14 @@
-                                           ![Superhero](/pics/superhero.png)
-                                              Format: ![Alt Text](url)   
+              ![Superhero](https://github.com/mazarzycki/AdventureGame/blob/master/pics/superhero.png)
+                      
  
  # Fantastic Adventure
-It's an easy game using the idea of gamebooks where the reader participates in the story. </br>
-It's only demo version of a more complicated story I have in mind. Its main purpose was to practice and prepare a piece of work I could use in my portfolio. 
-It was written using HTML, CSS and Vanilla JavaScript. 
+Fantastic Adventure is a game written using HTML, CSS and JavaScript using the idea of gamebooks where reader participates in the story. </br>
+
+## Technical details
+
+Game's mechanism based on the DOM modification methods where you hide/unhide determined elements by clicking on selected option shown on the screen.
+
+## Game objectives
+
 Your objective in the game is to defeat all your opponents and save the princess. 
+
