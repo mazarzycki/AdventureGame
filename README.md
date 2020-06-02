@@ -1,4 +1,4 @@
-![Superhero](./pics/superhero.png)
+![Superhero](./pics/superhero.png | width=100)
                       
  
  # Fantastic Adventure
