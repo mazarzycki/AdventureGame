@@ -1,4 +1,4 @@
-![Superhero](./pics/superhero.png){:height="50%" width="50%"}
+![Superhero](./pics/superhero_logo.png)
                       
  
  # Fantastic Adventure
