@@ -1,4 +1,4 @@
-![Superhero](./pics/superhero.png | width=100)
+![Superhero](./pics/superhero.png){:height="50%" width="50%"}
                       
  
  # Fantastic Adventure
